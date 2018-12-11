@@ -1,0 +1,86 @@
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}
+  
+@include placeholder {
+    padding-left: 15px;
+}
+
+.nav-bar{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    height: 80px;
+    *{
+        position: relative;
+        top: 25%;
+    }
+
+    span{
+        padding-left: 15px;
+    }
+}
+
+.search-div{
+    float: right;
+    font-size: 20px;
+    width: 25%;
+    padding-right: 10px;
+    margin-top: -5px;
+
+    * {
+        float: right;
+    }
+
+    button{
+        display: inline-block;
+        background-color: #0089ff;
+        width: 45px;
+        font-size: 20px;
+        border-color: #0089ff;
+        color: white;
+        height: 46px;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+
+        *{
+            right: 25%;
+        }
+    }
+
+    input {
+        display: inline-block;
+        width: 50%;
+        height: 40px;
+        border-radius: 5px 0px 0px 5px;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        font-size: 20px;
+
+        &:focus{
+            width: 80%;
+            -webkit-transition: width 1s;
+            transition: width 1s;
+        }
+
+        &:placeholder{
+            padding-left: 20px
+        }
+    }
+}
+
+.icons {
+    float: right;
+    color: gray;
+    font-size: 28px;
+    width: 9%;
+    padding: 0px 5px 0px 15px;
+
+    div{
+        display: inline-block;
+        width: 33%;
+    }
+}

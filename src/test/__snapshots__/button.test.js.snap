@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clicked button 1`] = `
+<button
+  onClick={[Function]}
+/>
+`;
+
+exports[`clicked button 2`] = `
+<button
+  onClick={[Function]}
+/>
+`;
+
+exports[`render button 1`] = `
+<button
+  onClick={[Function]}
+>
+  Facebook
+</button>
+`;

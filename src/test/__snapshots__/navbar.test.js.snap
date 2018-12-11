@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render navbar 1`] = `
+<div
+  className="nav-bar"
+>
+  <span>
+    Start Bootstrap
+  </span>
+  <div
+    className="icons"
+  >
+    <div />
+    <div />
+    <div />
+  </div>
+  <div
+    className="search-div"
+  >
+    <button
+      onClick={[Function]}
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Search for..."
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

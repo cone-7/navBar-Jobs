@@ -1,0 +1,26 @@
+.nav-bar{
+    .list-Auto-Complete{
+        position: fixed;
+        color: black;
+        width: 20%;
+        border: 1px solid #dedddd;
+        background-color: white;
+        top: 62px;
+        margin-left: 2.6%;
+
+        span{
+            height: 35px;
+            float: left;
+            display: block;
+            width: 96%;
+            line-height: 2;
+
+            &:hover{                
+                background-color: #1687ff;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render ListAutoComplete 1`] = `
+<div
+  className="list-Auto-Complete"
+>
+  <span
+    onClick={[Function]}
+  >
+    test
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    test2
+  </span>
+</div>
+`;
+
+exports[`clicked element of list 1`] = `
+<div
+  className="list-Auto-Complete"
+>
+  <span
+    onClick={[Function]}
+  >
+    test
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    test2
+  </span>
+</div>
+`;
+
+exports[`clicked element of list 2`] = `
+<div
+  className="list-Auto-Complete"
+>
+  <span
+    onClick={[Function]}
+  >
+    test
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    test2
+  </span>
+</div>
+`;
