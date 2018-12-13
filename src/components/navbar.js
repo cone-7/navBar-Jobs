@@ -20,10 +20,16 @@ class NavBar extends React.Component {
     async search(text){
         const list = await this.jobService.getJobs(text);
         const limit = list.length > 10 ? 10 : list.length;
-        if(text.length > 2){
+        console.log(list)
+        if(text.length > 2 && !list.error){
             this.setState({
                 searchText: text,
                 jobList: list.slice(0,limit)
+            });
+        } else {
+            this.setState({
+                searchText: text,
+                jobList: null
             });
         }
     }
@@ -36,15 +42,23 @@ class NavBar extends React.Component {
         this.props.searchText(event.target.value);
     }
 
-    async getJobInfo(jobId){
-        console.log(await this.jobService.getInfoJob(jobId));        
+    async getJobInfo(job){
+        console.log(await this.jobService.getInfoJob(job.uuid));
+        this.setState({
+            searchText: job.normalized_job_title,
+            jobList: null
+        });
     }
       
     resetValues(){
-        this.setState({
-            searchText: '',
-            jobList: null
-        })
+        setTimeout(function(){
+            this.setState({
+                searchText: '',
+                jobList: null
+            })
+        }
+        .bind(this), 500);
+        
     }
 
     render() {
@@ -69,7 +83,7 @@ class NavBar extends React.Component {
                 <input type="text"
                     onChange={this.handleChange.bind(this)}  
                     value={this.state.searchText} 
-                    // onBlur={this.resetValues.bind(this)}
+                    onBlur={this.resetValues.bind(this)}
                     placeholder="Search for..."></input>
                 {
                     this.state.jobList ?

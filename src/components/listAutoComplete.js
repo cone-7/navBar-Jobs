@@ -9,7 +9,7 @@ class ListAutoComplete extends React.Component {
         return list.map((element, index) => {
             return <span 
                 key={index} 
-                onClick={() => this.props.clicked(element.uuid)}>
+                onClick={() => this.props.clicked(element)}>
                     {element.normalized_job_title}
             </span>;
         })
