@@ -1,6 +1,6 @@
 class JobService {
     async getJobs(title){
-        return fetch(`http://api.dataatwork.org/v1/jobs/autocomplete?begins_with=${title}`, {
+        return fetch(`https://api.dataatwork.org/v1/jobs/autocomplete?begins_with=${title}`, {
 		  method: 'GET',
 		  headers: {
 		    'Accept': 'application/json'
@@ -13,7 +13,7 @@ class JobService {
 	}
 	
 	async getInfoJob(jobId){
-		return fetch(`http://api.dataatwork.org/v1/jobs/${jobId}`, {
+		return fetch(`https://api.dataatwork.org/v1/jobs/${jobId}`, {
 		  method: 'GET',
 		  headers: {
 		    'Accept': 'application/json'
