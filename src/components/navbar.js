@@ -19,10 +19,11 @@ class NavBar extends React.Component {
 
     async search(text){
         const list = await this.jobService.getJobs(text);
+        const limit = list.length > 10 ? 10 : list.length;
         if(text.length > 2){
             this.setState({
                 searchText: text,
-                jobList: list.slice(0,10)
+                jobList: list.slice(0,limit)
             });
         }
     }
@@ -66,7 +67,7 @@ class NavBar extends React.Component {
                     <FontAwesomeIcon icon="search" />
                 </ButtonComponent>
                 <input type="text"
-                    onChange={this.handleChange.bind(this, 'searchText')}  
+                    onChange={this.handleChange.bind(this)}  
                     value={this.state.searchText} 
                     // onBlur={this.resetValues.bind(this)}
                     placeholder="Search for..."></input>
